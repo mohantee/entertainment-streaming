@@ -1,8 +1,7 @@
 import "./SearchBox.css";
 import IconSearch from "../../assets/icon-search.svg";
 
-const SearchBox = ({ text }: { text: string }) => {
-  console.log(text); // shows undefined in browser??
+const SearchBox = () => {
   return (
     <div className="search-box-group">
       <img src={IconSearch} className="search-icon" />

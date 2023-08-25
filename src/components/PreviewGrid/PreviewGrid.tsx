@@ -1,4 +1,5 @@
 import PreviewCard from "../PreviewCard/PreviewCard";
+import "./PreviewGrid.css";
 
 export interface Show {
   title: string;
@@ -23,18 +24,20 @@ export interface Show {
 
 interface propTypes {
   shows: Show[];
-  text: string;
+  type: string;
 }
 
-const ShowsList = (props: propTypes) => {
-  console.log(props.text);
+const PreviewGrid = (props: propTypes) => {
   return (
-    <div className="shows-grid">
-      {props.shows.map((show) => {
-        return <PreviewCard key={show.title} details={show} />;
-      })}
+    <div>
+      <h2 className="list-type">{props.type}</h2>
+      <div className="shows-grid">
+        {props.shows.map((show) => {
+          return <PreviewCard key={show.title} details={show} />;
+        })}
+      </div>
     </div>
   );
 };
 
-export default ShowsList;
+export default PreviewGrid;

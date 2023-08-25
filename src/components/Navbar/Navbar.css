@@ -28,6 +28,7 @@ img {
 @media (min-width: 30rem) {
   .navbar,
   .nav-links {
-    flex-direction: column;
+    /* flex-direction: column; */
+    flex-direction: row;
   }
 }
