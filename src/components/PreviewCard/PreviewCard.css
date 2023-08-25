@@ -1,0 +1,4 @@
+.preview-card {
+  height: clamp(6.875rem, 6vh, 10.625rem);
+  border: 1px solid red;
+}
