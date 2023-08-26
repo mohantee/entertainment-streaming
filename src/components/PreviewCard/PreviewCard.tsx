@@ -6,11 +6,11 @@ import PlayIcon from "../../assets/icon-play.svg";
 import BookmarkEmpty from "../../shared/SVGs/BookmarkEmpty";
 import BookmarkFull from "../../shared/SVGs/BookmarkFull";
 
-interface propTypes {
+interface PreviewCardProps {
   details: Show;
 }
 
-const PreviewCard = (props: propTypes) => {
+const PreviewCard = (props: PreviewCardProps) => {
   const { isBookmarked, title, year, thumbnail, category, rating } =
     props.details;
   return (

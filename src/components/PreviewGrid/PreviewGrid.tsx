@@ -23,13 +23,13 @@ export interface Show {
   isTrending: boolean;
 }
 
-interface propTypes {
+interface PreviewGridProps {
   shows: Show[];
   heading: string;
   isTrending?: boolean;
 }
 
-const PreviewGrid = (props: propTypes) => {
+const PreviewGrid = (props: PreviewGridProps) => {
   return (
     <div className="preview-grid">
       <h2 className="preview-grid-heading">{props.heading}</h2>
