@@ -1,22 +1,33 @@
+.preview-grid {
+  margin-bottom: 1rem;
+}
+
 .shows-grid {
   display: grid;
-  justify-items: center;
+  /* justify-items: center; */
   grid-template-columns: repeat(
-    auto-fit,
+    auto-fill,
     minmax(min(100% / 3, max(11rem, 100% / 5)), 1fr)
   );
   gap: 2rem;
 }
 
-.list-type {
+.preview-grid-heading {
   font-size: var(--fs-700);
   letter-spacing: -0.312px;
 }
 
 .shows-grid,
-.list-type {
-  padding: 1rem;
+.preview-grid-heading {
+  padding: 0.5rem 1rem;
 }
+
+.preview-grid > .trending {
+  display: flex;
+  overflow-x: auto;
+  flex-shrink: 0;
+}
+
 @media (min-width: 30rem) {
   .shows-grid {
     padding: 2rem;

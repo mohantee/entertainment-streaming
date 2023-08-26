@@ -1,0 +1,20 @@
+.bookmark-icon .bookmark-empty-circle,
+.bookmark-icon .bookmark-empty-path,
+.bookmark-icon .bookmark-full-circle,
+.bookmark-icon .bookmark-full-path {
+  transition: all 0.4s ease;
+}
+
+.bookmark-icon:hover .bookmark-empty-circle,
+.bookmark-icon:hover .bookmark-full-circle {
+  fill: hsl(var(--clr-white));
+  opacity: 1;
+}
+
+.bookmark-icon:hover .bookmark-empty-path {
+  stroke: hsl(var(--clr-dark));
+}
+
+.bookmark-icon:hover .bookmark-full-path {
+  fill: hsl(var(--clr-dark));
+}

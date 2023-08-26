@@ -1,4 +1,4 @@
-import "../PreviewCard.css";
+import "./BookmarkSVG.css";
 
 const BookmarkFull = () => {
   return (

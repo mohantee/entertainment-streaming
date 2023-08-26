@@ -1,4 +1,5 @@
 import PreviewCard from "../PreviewCard/PreviewCard";
+import TrendingCard from "../TrendingCard/TrendingCard";
 import "./PreviewGrid.css";
 
 export interface Show {
@@ -24,15 +25,19 @@ export interface Show {
 
 interface propTypes {
   shows: Show[];
-  type: string;
+  heading: string;
+  isTrending?: boolean;
 }
 
 const PreviewGrid = (props: propTypes) => {
   return (
-    <div>
-      <h2 className="list-type">{props.type}</h2>
-      <div className="shows-grid">
+    <div className="preview-grid">
+      <h2 className="preview-grid-heading">{props.heading}</h2>
+      <div className={props.isTrending ? "shows-grid trending" : "shows-grid"}>
         {props.shows.map((show) => {
+          if (props.isTrending) {
+            return <TrendingCard key={show.title} details={show} />;
+          }
           return <PreviewCard key={show.title} details={show} />;
         })}
       </div>

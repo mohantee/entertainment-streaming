@@ -1,5 +1,5 @@
 import { Show } from "../PreviewGrid/PreviewGrid";
-import "./PreviewCard.css";
+import "./TrendingCard.css";
 import CategoryMovie from "../../assets/icon-category-movie.svg";
 import CategoryTV from "../../assets/icon-category-tv.svg";
 import PlayIcon from "../../assets/icon-play.svg";
@@ -10,11 +10,11 @@ interface propTypes {
   details: Show;
 }
 
-const PreviewCard = (props: propTypes) => {
+const TrendingCard = (props: propTypes) => {
   const { isBookmarked, title, year, thumbnail, category, rating } =
     props.details;
   return (
-    <div className="preview-card">
+    <div className="trending-card">
       <div className="image-container">
         <img src={thumbnail.regular.large} />
         <div className="play-button">
@@ -37,4 +37,4 @@ const PreviewCard = (props: propTypes) => {
   );
 };
 
-export default PreviewCard;
+export default TrendingCard;

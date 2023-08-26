@@ -1,4 +1,4 @@
-.preview-card {
+.trending-card {
   display: flex;
   flex-direction: column;
   gap: 0.5em;
@@ -25,7 +25,7 @@
   transition: opacity 0.2s ease;
 }
 
-.preview-card .play-icon {
+.trending-card .play-icon {
   height: 20px;
   width: 20px;
 }
@@ -52,11 +52,11 @@
   opacity: 1;
 }
 
-.preview-card .play-button p {
+.trending-card .play-button p {
   font-weight: 500;
 }
 
-.preview-card .bookmark-icon {
+.trending-card .bookmark-icon {
   height: 25px;
   width: 25px;
   margin: auto;
@@ -67,7 +67,7 @@
   cursor: pointer;
 }
 
-.preview-card .category-container {
+.trending-card .category-container {
   display: flex;
   align-items: center;
   gap: 3px;
@@ -77,21 +77,25 @@
   opacity: 1;
 }
 
-.preview-card .year,
-.preview-card .category,
-.preview-card .rating {
+.trending-card .year,
+.trending-card .category,
+.trending-card .rating {
   font-size: var(--fs-300);
   opacity: 0.75;
 }
 
-.preview-card .title {
+.trending-card .title {
   font-size: var(--fs-500);
   font-weight: 500;
   padding: 0;
   line-height: 1;
 }
 
-.preview-card .category-icon {
+.trending-card .category-icon {
   height: 10px;
   width: 10px;
+}
+
+.trending-card .image-container {
+  height: clamp(165px, 20vw, 400px);
 }
