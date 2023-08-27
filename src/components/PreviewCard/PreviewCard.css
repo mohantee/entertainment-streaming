@@ -1,28 +1,34 @@
 .preview-card {
   display: flex;
   flex-direction: column;
-  gap: 0.5em;
-}
-
-.image-container {
-  border-radius: 8px;
-  overflow: hidden;
-  aspect-ratio: 16/9;
-  min-width: 164px;
+  gap: 0.5rem;
   position: relative;
 }
 
-.image-container::after {
-  content: "";
+.preview-card .image-container::after {
   opacity: 0;
+  content: "";
   position: absolute;
-  top: 0;
-  left: 0;
   height: 100%;
   width: 100%;
-  cursor: pointer;
-  background: hsl(var(--clr-dark) / 0.8);
+  top: 0;
+  left: 0;
+  background-color: hsl(var(--clr-dark) / 0.75);
   transition: opacity 0.2s ease;
+}
+
+.preview-card .image-container:hover::after {
+  opacity: 1;
+}
+
+.preview-card .image-container {
+  border-radius: 8px;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  min-width: 164px;
+  position: relative;
+  background-position: center;
+  background-size: cover;
 }
 
 .preview-card .play-icon {
@@ -30,7 +36,7 @@
   width: 20px;
 }
 
-.image-container .play-button {
+.preview-card .image-container .play-button {
   cursor: pointer;
   opacity: 0;
   position: absolute;
@@ -48,7 +54,7 @@
   z-index: 1;
 }
 
-.image-container:hover .play-button {
+.preview-card .image-container:hover .play-button {
   opacity: 1;
 }
 
@@ -73,7 +79,7 @@
   gap: 3px;
 }
 
-.image-container:hover::after {
+.preview-card .image-container:hover::after {
   opacity: 1;
 }
 

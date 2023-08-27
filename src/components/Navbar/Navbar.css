@@ -53,6 +53,7 @@
     height: 90%;
     width: 6vw;
     min-width: 4rem;
+    max-width: 6rem;
     position: fixed;
     top: 5%;
     left: minmax(2%, 1rem);

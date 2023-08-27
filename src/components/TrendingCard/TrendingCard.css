@@ -4,6 +4,22 @@
   gap: 0.5rem;
 }
 
+.trending-card .image-container::after {
+  opacity: 0;
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: hsl(var(--clr-dark) / 0.75);
+  transition: opacity 0.2s ease;
+}
+
+.trending-card .image-container:hover::after {
+  opacity: 1;
+}
+
 .trending-card .image-container {
   border-radius: 8px;
   overflow: hidden;

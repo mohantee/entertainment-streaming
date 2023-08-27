@@ -15,8 +15,10 @@ const PreviewCard = (props: PreviewCardProps) => {
     props.details;
   return (
     <div className="preview-card">
-      <div className="image-container">
-        <img src={thumbnail.regular.large} />
+      <div
+        className="image-container"
+        style={{ backgroundImage: `url(${thumbnail.regular.large})` }}
+      >
         <div className="play-button">
           <img src={PlayIcon} className="play-icon" />
           <p>Play</p>
