@@ -1,0 +1,17 @@
+.svg-group:hover > .svg > .path {
+  fill: #fc4747;
+}
+
+.active {
+  fill: white;
+}
+
+.path {
+  transition: fill 0.2s ease;
+}
+
+@media (min-width: 30rem) {
+  .svg {
+    transform: scale(1.25);
+  }
+}

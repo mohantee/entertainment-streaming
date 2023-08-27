@@ -1,0 +1,14 @@
+.inner-content {
+  padding: 1rem;
+}
+@media (min-width: 30rem) {
+  .main-layout {
+    display: flex;
+  }
+
+  .inner-content {
+    margin-left: 6rem;
+    padding: 2vw;
+    width: calc(100vw - 6rem);
+  }
+}

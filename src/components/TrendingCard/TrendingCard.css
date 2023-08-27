@@ -1,36 +1,25 @@
 .trending-card {
   display: flex;
   flex-direction: column;
-  gap: 0.5em;
+  gap: 0.5rem;
 }
 
-.image-container {
+.trending-card .image-container {
   border-radius: 8px;
   overflow: hidden;
   aspect-ratio: 16/9;
   min-width: 164px;
   position: relative;
-}
-
-.image-container::after {
-  content: "";
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  cursor: pointer;
-  background: hsl(var(--clr-dark) / 0.8);
-  transition: opacity 0.2s ease;
+  background-position: center;
+  background-size: cover;
 }
 
 .trending-card .play-icon {
-  height: 20px;
-  width: 20px;
+  height: 25px;
+  width: 25px;
 }
 
-.image-container .play-button {
+.trending-card .image-container .play-button {
   cursor: pointer;
   opacity: 0;
   position: absolute;
@@ -40,15 +29,15 @@
   border-radius: 50px;
   background-color: hsl(var(--clr-white) / 0.2);
   transform: translate(-50%, -50%);
-  transition: opacity 0.2s ease;
+  transition: all 0.2s ease;
   display: flex;
   align-items: center;
   gap: 0.5em;
-  padding: 0.3rem;
+  padding: 0.6rem;
   z-index: 1;
 }
 
-.image-container:hover .play-button {
+.trending-card .image-container:hover .play-button {
   opacity: 1;
 }
 
@@ -57,8 +46,8 @@
 }
 
 .trending-card .bookmark-icon {
-  height: 25px;
-  width: 25px;
+  height: 30px;
+  width: 30px;
   margin: auto;
   position: absolute;
   top: 5px;
@@ -71,9 +60,6 @@
   display: flex;
   align-items: center;
   gap: 3px;
-  /* position: absolute; */
-  /* bottom: 0; */
-  /* left: 0; */
 }
 
 .trending-card .position-absolute {
@@ -107,5 +93,5 @@
 }
 
 .trending-card .image-container {
-  height: clamp(165px, 20vw, 400px);
+  height: clamp(165px, 15vw, 400px);
 }

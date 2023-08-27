@@ -1,7 +1,11 @@
 .search-box-group {
   display: flex;
-  margin: 1em;
   align-items: center;
+  background-color: hsl(var(--clr-dark));
+  z-index: 2;
+  overflow: hidden;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .search-icon {
@@ -37,5 +41,9 @@
     height: 32px;
     width: 32px;
     margin-right: 1rem;
+  }
+  .search-box-group {
+    position: sticky;
+    top: 0;
   }
 }
