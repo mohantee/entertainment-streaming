@@ -55,8 +55,8 @@ body,
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  background-color: hsl(var(--clr-dark));
   font-family: var(--ff-primary);
+  background-color: hsl(var(--clr-dark));
   font-weight: 300;
   color: hsl(var(--clr-white));
 }
