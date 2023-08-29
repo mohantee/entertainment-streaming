@@ -9,7 +9,7 @@
     auto-fill,
     minmax(min(100% / 3, max(11rem, 100% / 5)), 1fr)
   );
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .preview-grid-heading {

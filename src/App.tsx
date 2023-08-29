@@ -4,8 +4,10 @@ import Home from "./pages/Home";
 import Movies from "./pages/Movies";
 import TVSeries from "./pages/TVSeries";
 import Bookmarks from "./pages/Bookmarks";
+import useInitializeStore from "./hooks/useFetchShows";
 
 function App() {
+  useInitializeStore();
   return (
     <BrowserRouter>
       <Routes>

@@ -2,6 +2,12 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  text-decoration: none;
+  color: hsl(var(--clr-white));
+}
+
+.trending-card:focus {
+  outline: none;
 }
 
 .trending-card .image-container::after {
@@ -16,7 +22,8 @@
   transition: opacity 0.2s ease;
 }
 
-.trending-card .image-container:hover::after {
+.trending-card .image-container:hover::after,
+.trending-card .image-container:focus-within::after {
   opacity: 1;
 }
 
@@ -57,10 +64,21 @@
   opacity: 1;
 }
 
+.trending-card:focus-within .play-button {
+  opacity: 1;
+}
+
+.trending-card:focus .image-container::after {
+  opacity: 1;
+}
+
 .trending-card .play-button p {
   font-weight: 500;
 }
 
+.trending-card .play-button:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+}
 .trending-card .bookmark-icon {
   height: 30px;
   width: 30px;
@@ -70,8 +88,33 @@
   right: 5px;
   z-index: 1;
   cursor: pointer;
+  outline: none;
 }
 
+.trending-card .bookmark-icon-circle,
+.trending-card .bookmark-icon-path {
+  transition: all 0.4s ease;
+}
+
+.trending-card .bookmark-icon:hover .bookmark-icon-circle,
+.trending-card .bookmark-icon:focus .bookmark-icon-circle {
+  fill: hsl(var(--clr-white));
+  opacity: 1;
+}
+
+.trending-card .bookmark-icon:hover .bookmark-icon-path,
+.trending-card .bookmark-icon:focus .bookmark-icon-path {
+  stroke: hsl(var(--clr-dark));
+}
+
+.trending-card .active {
+  fill: hsl(var(--clr-white));
+}
+
+.trending-card .bookmark-icon:hover .active,
+.trending-card .bookmark-icon:focus .active {
+  fill: hsl(var(--clr-dark));
+}
 .trending-card .category-container {
   display: flex;
   align-items: center;

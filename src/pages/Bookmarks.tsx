@@ -1,24 +1,41 @@
 import PreviewGrid from "../components/PreviewGrid/PreviewGrid";
-import useFetchShows from "../hooks/useFetchShows";
+import useShowsStore from "../store/shows";
+import { FiAlertCircle } from "react-icons/fi";
+import "./Bookmarks.css";
 
 const Bookmarks = () => {
-  const shows = useFetchShows();
-
-  const bookmarkedMovies = shows.filter(
-    (show) => show.isBookmarked && show.category === "Movie",
+  const bookmarks = useShowsStore((state) =>
+    state.shows.filter((show) => show.isBookmarked),
   );
-  const bookmarkedTVSeries = shows.filter(
-    (show) => show.isBookmarked && show.category === "TV Series",
+  const bookmarkedMovies = bookmarks.filter(
+    (bookmark) => bookmark.category === "Movie",
+  );
+  const bookmarkedTVSeries = bookmarks.filter(
+    (bookmark) => bookmark.category === "TV Series",
   );
 
-  if (!shows) return <h1>Loading...</h1>;
+  const UIEmptyBookmarksAlert = (
+    <div className="bookmarks-empty">
+      <FiAlertCircle size={35} />
+      <h3 className="empty-alert">Add bookmarks to see them here</h3>
+    </div>
+  );
 
-  return (
+  const UIShowBookmarks = (
     <>
-      <PreviewGrid heading="Bookmarked Movies" shows={bookmarkedMovies} />
-      <PreviewGrid heading="Bookmarked TV Series" shows={bookmarkedTVSeries} />
+      {bookmarkedMovies.length ? (
+        <PreviewGrid heading="Bookmarked Movies" shows={bookmarkedMovies} />
+      ) : null}
+      {bookmarkedTVSeries.length ? (
+        <PreviewGrid
+          heading="Bookmarked TV Series"
+          shows={bookmarkedTVSeries}
+        />
+      ) : null}
     </>
   );
+
+  return !bookmarks.length ? UIEmptyBookmarksAlert : UIShowBookmarks;
 };
 
 export default Bookmarks;

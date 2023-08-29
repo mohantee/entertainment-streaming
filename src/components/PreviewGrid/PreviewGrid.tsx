@@ -17,7 +17,7 @@ export interface Show {
     };
   };
   year: number;
-  category: string;
+  category: "Movie" | "TV Series";
   rating: string;
   isBookmarked: boolean;
   isTrending: boolean;

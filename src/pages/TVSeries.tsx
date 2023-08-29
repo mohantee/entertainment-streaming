@@ -1,8 +1,8 @@
 import PreviewGrid from "../components/PreviewGrid/PreviewGrid";
-import useFetchShows from "../hooks/useFetchShows";
+import useShowsStore from "../store/shows";
 
 const TVSeries = () => {
-  const shows = useFetchShows();
+  const shows = useShowsStore((state) => state.shows);
 
   const tvSeries = shows.filter((show) => show.category === "TV Series");
 

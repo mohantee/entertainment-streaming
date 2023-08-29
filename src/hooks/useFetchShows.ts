@@ -1,17 +1,13 @@
-import { useState, useEffect } from "react";
-import { Show } from "../components/PreviewGrid/PreviewGrid";
+import { useEffect } from "react";
+import useShowsStore from "../store/shows";
 
-const useFetchShows = () => {
-  const [shows, setShows] = useState<Show[]>([]);
+// populates the store on intial load
+const useInitializeStore = () => {
+  const fetchShows = useShowsStore((state) => state.fetchShows);
 
   useEffect(() => {
-    fetch("../data.json")
-      .then((res) => res.json())
-      .then((data) => setShows(data as Show[]))
-      .catch(() => console.log("error"));
-  }, []);
-
-  return shows;
+    fetchShows().catch(() => console.log("error"));
+  }, [fetchShows]);
 };
 
-export default useFetchShows;
+export default useInitializeStore;

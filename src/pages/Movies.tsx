@@ -1,8 +1,8 @@
 import PreviewGrid from "../components/PreviewGrid/PreviewGrid";
-import useFetchShows from "../hooks/useFetchShows";
+import useShowsStore from "../store/shows";
 
 const Movies = () => {
-  const shows = useFetchShows();
+  const shows = useShowsStore((state) => state.shows);
 
   if (!shows) {
     return <h1>Loading...</h1>;

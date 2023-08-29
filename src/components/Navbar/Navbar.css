@@ -38,6 +38,18 @@
   transform: scale(1.3);
 }
 
+.svg-group:hover > .svg > .path {
+  fill: #fc4747;
+}
+
+.svg-group .active {
+  fill: white;
+}
+
+.path {
+  transition: fill 0.2s ease;
+}
+
 @media (min-width: 30rem) {
   .navbar,
   .nav-links {
@@ -70,5 +82,8 @@
   .navbar .avatar {
     height: 2.5rem;
     width: 2.5rem;
+  }
+  .svg {
+    transform: scale(1.25);
   }
 }
