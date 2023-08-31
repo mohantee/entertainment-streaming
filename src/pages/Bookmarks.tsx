@@ -30,7 +30,18 @@ const Bookmarks = () => {
     </div>
   );
 
-  const UIShowBookmarks = (
+  if (!bookmarks.length) return UIEmptyBookmarksAlert;
+
+  if (!filteredBookmarkedMovies.length && !filteredBookmarkeTVSeries.length) {
+    return (
+      <div className="search-empty">
+        <FiAlertCircle size={35} />
+        <h3 className="empty-alert">No results</h3>
+      </div>
+    );
+  }
+
+  const UIBookmarks = (
     <>
       {filteredBookmarkedMovies.length ? (
         <PreviewGrid
@@ -47,7 +58,7 @@ const Bookmarks = () => {
     </>
   );
 
-  return !bookmarks.length ? UIEmptyBookmarksAlert : UIShowBookmarks;
+  return !bookmarks.length ? UIEmptyBookmarksAlert : UIBookmarks;
 };
 
 export default Bookmarks;

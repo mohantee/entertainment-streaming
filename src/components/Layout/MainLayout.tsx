@@ -7,13 +7,15 @@ import { useState } from "react";
 const MainLayout = () => {
   const [searchValue, setSearchValue] = useState("");
   return (
-    <div className="main-layout">
-      <Navbar />
-      <div className="inner-content">
-        <SearchBox search={[searchValue, setSearchValue]} />
-        <Outlet context={[searchValue, setSearchValue]} />
+    <main>
+      <div className="main-layout">
+        <Navbar />
+        <div className="inner-content">
+          <SearchBox search={[searchValue, setSearchValue]} />
+          <Outlet context={[searchValue, setSearchValue]} />
+        </div>
       </div>
-    </div>
+    </main>
   );
 };
 

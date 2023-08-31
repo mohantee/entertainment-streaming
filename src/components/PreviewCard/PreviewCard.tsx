@@ -37,8 +37,9 @@ const PreviewCard = (props: PreviewCardProps) => {
           viewBox="0 0 32 32"
           fill="none"
           className="bookmark-icon"
-          onClick={() => {
+          onClick={(e) => {
             toggleBookmark(props.details);
+            e.currentTarget.blur();
           }}
           onKeyDown={(e) => {
             if (e.key === "Enter" || e.key === " ")

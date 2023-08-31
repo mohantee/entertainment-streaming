@@ -2,6 +2,13 @@
   padding: 1rem;
 }
 
+@media (min-width: 30rem) {
+  .inner-content {
+    margin-top: 4rem;
+    padding: 2vw;
+  }
+}
+
 @media (min-width: 48rem) {
   .main-layout {
     display: flex;
