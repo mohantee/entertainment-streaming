@@ -23,7 +23,7 @@ const PreviewCard = (props: PreviewCardProps) => {
       onClick={(e) => e.currentTarget.blur()}
     >
       <div
-        className="image-container"
+        className="thumbnail"
         style={{ backgroundImage: `url(${thumbnail.regular.large})` }}
       >
         <div className="play-button">

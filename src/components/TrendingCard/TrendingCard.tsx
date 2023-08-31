@@ -22,7 +22,7 @@ const TrendingCard = (props: TrendingCardProps) => {
       onClick={(e) => e.currentTarget.blur()}
     >
       <div
-        className="image-container"
+        className="thumbnail"
         style={{ backgroundImage: `url(${thumbnail.trending?.large})` }}
       >
         <div className="play-button">
