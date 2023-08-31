@@ -4,12 +4,13 @@
 
 .shows-grid {
   display: grid;
-  /* justify-items: center; */
+  gap: 1rem;
   grid-template-columns: repeat(
     auto-fill,
-    minmax(min(100% / 3, max(11rem, 100% / 5)), 1fr)
+    minmax(min(100% / 2, max(10rem, 100% / 5)), 1fr)
   );
-  gap: 2rem;
+  list-style: none;
+  padding: 0;
 }
 
 .preview-grid-heading {
@@ -27,5 +28,10 @@
 @media (min-width: 30rem) {
   .shows-grid {
     gap: 2rem;
+
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(min(100% / 3, max(11rem, 100% / 5)), 1fr)
+    );
   }
 }

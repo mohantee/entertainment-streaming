@@ -13,9 +13,14 @@ interface TrendingCardProps {
 const TrendingCard = (props: TrendingCardProps) => {
   const { isBookmarked, title, year, thumbnail, category, rating } =
     props.details;
+
   const toggleBookmark = useShowsStore((state) => state.toggleBookmark);
   return (
-    <Link to="" className="trending-card">
+    <Link
+      to=""
+      className="trending-card"
+      onClick={(e) => e.currentTarget.blur()}
+    >
       <div
         className="image-container"
         style={{ backgroundImage: `url(${thumbnail.trending?.large})` }}

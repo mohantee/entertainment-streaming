@@ -4,10 +4,10 @@ import Home from "./pages/Home";
 import Movies from "./pages/Movies";
 import TVSeries from "./pages/TVSeries";
 import Bookmarks from "./pages/Bookmarks";
-import useInitializeStore from "./hooks/useFetchShows";
+import useInitializeStore from "./hooks/useInitializeStore";
 
 function App() {
-  useInitializeStore();
+  useInitializeStore(); // fetch shows data and add it to global state
   return (
     <BrowserRouter>
       <Routes>

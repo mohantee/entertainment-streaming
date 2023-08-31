@@ -1,20 +1,36 @@
+import { useOutletContext } from "react-router-dom";
 import PreviewGrid from "../components/PreviewGrid/PreviewGrid";
 import useShowsStore from "../store/shows";
+import { FiAlertCircle } from "react-icons/fi";
+import "./Home.css";
 
 const Home = () => {
-  const shows = useShowsStore((state) => state.shows);
-  console.log(shows);
+  const unfilteredShows = useShowsStore((state) => state.shows);
+  const [searchValue] = useOutletContext<[searchValue: string]>();
 
-  if (!shows) {
-    return <h1>Loading...</h1>;
+  const filteredShows = unfilteredShows.filter((show) =>
+    show.title.toLowerCase().includes(searchValue.toLowerCase()),
+  );
+
+  if (!filteredShows.length) {
+    return (
+      <div className="search-empty">
+        <FiAlertCircle size={35} />
+        <h3 className="empty-alert">No results</h3>
+      </div>
+    );
   }
 
-  const trendingShows = shows.filter((show) => show.isTrending);
+  const trendingShows = filteredShows.filter((show) => show.isTrending);
 
   return (
     <>
-      <PreviewGrid shows={trendingShows} heading="Trending" isTrending />
-      <PreviewGrid shows={shows} heading="Recommended for you" />
+      {trendingShows.length ? (
+        <PreviewGrid shows={trendingShows} heading="Trending" isTrending />
+      ) : null}
+      {filteredShows.length ? (
+        <PreviewGrid shows={filteredShows} heading="Recommended for you" />
+      ) : null}
     </>
   );
 };

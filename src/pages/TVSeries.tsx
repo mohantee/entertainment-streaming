@@ -1,16 +1,28 @@
+import { useOutletContext } from "react-router-dom";
 import PreviewGrid from "../components/PreviewGrid/PreviewGrid";
 import useShowsStore from "../store/shows";
+import { FiAlertCircle } from "react-icons/fi";
 
 const TVSeries = () => {
-  const shows = useShowsStore((state) => state.shows);
+  const unfilteredShows = useShowsStore((state) => state.shows);
+  const [searchValue] = useOutletContext<[searchValue: string]>();
 
-  const tvSeries = shows.filter((show) => show.category === "TV Series");
+  const filteredShows = unfilteredShows.filter(
+    (show) =>
+      show.title.toLowerCase().includes(searchValue.toLowerCase()) &&
+      show.category === "TV Series",
+  );
 
-  if (!shows) {
-    return <h1>Loading...</h1>;
+  if (!filteredShows.length) {
+    return (
+      <div className="search-empty">
+        <FiAlertCircle size={35} />
+        <h3 className="empty-alert">No results</h3>
+      </div>
+    );
   }
 
-  return <PreviewGrid shows={tvSeries} heading="TV Series" />;
+  return <PreviewGrid shows={filteredShows} heading="TV Series" />;
 };
 
 export default TVSeries;

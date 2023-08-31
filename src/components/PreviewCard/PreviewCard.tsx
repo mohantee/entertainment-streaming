@@ -16,7 +16,12 @@ const PreviewCard = (props: PreviewCardProps) => {
 
   const toggleBookmark = useShowsStore((state) => state.toggleBookmark);
   return (
-    <Link to="" className="preview-card" tabIndex={0}>
+    <Link
+      to=""
+      className="preview-card"
+      tabIndex={0}
+      onClick={(e) => e.currentTarget.blur()}
+    >
       <div
         className="image-container"
         style={{ backgroundImage: `url(${thumbnail.regular.large})` }}

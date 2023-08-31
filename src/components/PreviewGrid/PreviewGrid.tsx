@@ -33,14 +33,18 @@ const PreviewGrid = (props: PreviewGridProps) => {
   return (
     <div className="preview-grid">
       <h2 className="preview-grid-heading">{props.heading}</h2>
-      <div className={props.isTrending ? "shows-grid trending" : "shows-grid"}>
+      <ul className={props.isTrending ? "shows-grid trending" : "shows-grid"}>
         {props.shows.map((show) => {
           if (props.isTrending) {
-            return <TrendingCard key={show.title} details={show} />;
+            return (
+              <li key={show.title}>
+                <TrendingCard details={show} />
+              </li>
+            );
           }
           return <PreviewCard key={show.title} details={show} />;
         })}
-      </div>
+      </ul>
     </div>
   );
 };
