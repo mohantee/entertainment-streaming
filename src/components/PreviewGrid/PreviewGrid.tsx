@@ -31,7 +31,7 @@ interface PreviewGridProps {
 
 const PreviewGrid = (props: PreviewGridProps) => {
   return (
-    <div className="preview-grid">
+    <section className="preview-grid">
       <h2 className="preview-grid-heading">{props.heading}</h2>
       <ul className={props.isTrending ? "shows-grid trending" : "shows-grid"}>
         {props.shows.map((show) => {
@@ -42,10 +42,14 @@ const PreviewGrid = (props: PreviewGridProps) => {
               </li>
             );
           }
-          return <PreviewCard key={show.title} details={show} />;
+          return (
+            <li key={show.title}>
+              <PreviewCard details={show} />
+            </li>
+          );
         })}
       </ul>
-    </div>
+    </section>
   );
 };
 

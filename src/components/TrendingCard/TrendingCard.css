@@ -93,7 +93,7 @@
   .play-button:hover {
     transform: translate(-50%, -50%) scale(1.1);
   }
-  .bookmark-icon {
+  .bookmark-button {
     height: 30px;
     width: 30px;
     margin: auto;
@@ -103,21 +103,25 @@
     z-index: 1;
     cursor: pointer;
     outline: none;
+    padding: 0;
+    background: none;
+    border: none;
+    transform: scale(1.2);
   }
 
-  .bookmark-icon-circle,
-  .bookmark-icon-path {
+  .bookmark-button-circle,
+  .bookmark-button-path {
     transition: all 0.4s ease;
   }
 
-  .bookmark-icon:hover .bookmark-icon-circle,
-  .bookmark-icon:focus .bookmark-icon-circle {
+  .bookmark-button:hover .bookmark-button-circle,
+  .bookmark-button:focus .bookmark-button-circle {
     fill: hsl(var(--clr-white));
     opacity: 1;
   }
 
-  .bookmark-icon:hover .bookmark-icon-path,
-  .bookmark-icon:focus .bookmark-icon-path {
+  .bookmark-button:hover .bookmark-button-path,
+  .bookmark-button:focus .bookmark-button-path {
     stroke: hsl(var(--clr-dark));
   }
 
@@ -125,8 +129,8 @@
     fill: hsl(var(--clr-white));
   }
 
-  .bookmark-icon:hover .active,
-  .bookmark-icon:focus .active {
+  .bookmark-button:hover .active,
+  .bookmark-button:focus .active {
     fill: hsl(var(--clr-dark));
   }
   .category-container {
@@ -140,6 +144,8 @@
     bottom: 5px;
     left: 10px;
     z-index: 1;
+    display: flex;
+    flex-direction: column-reverse;
   }
 
   .thumbnail:hover::after {

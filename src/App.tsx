@@ -1,10 +1,12 @@
 import MainLayout from "./components/Layout/MainLayout";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import Home from "./pages/Home";
-import Movies from "./pages/Movies";
-import TVSeries from "./pages/TVSeries";
-import Bookmarks from "./pages/Bookmarks";
 import useInitializeStore from "./hooks/useInitializeStore";
+import { lazy } from "react";
+
+const Home = lazy(() => import("./pages/Home"));
+const Movies = lazy(() => import("./pages/Movies"));
+const TVSeries = lazy(() => import("./pages/TVSeries"));
+const Bookmarks = lazy(() => import("./pages/Bookmarks"));
 
 function App() {
   useInitializeStore(); // fetch shows data and add it to global state
