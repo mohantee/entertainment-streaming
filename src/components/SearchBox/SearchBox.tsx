@@ -12,7 +12,7 @@ const SearchBox = (props: SearchBoxProps) => {
   const [searchValue, setSearchValue] = props.search;
   return (
     <div className="search-box-group">
-      <img src={IconSearch} className="search-icon" />
+      <img src={IconSearch} className="search-icon" alt="" />
       <label htmlFor="search" className="sr-only">
         Search for Movies or TV series
       </label>
