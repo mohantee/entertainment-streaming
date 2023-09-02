@@ -93,6 +93,11 @@ h6 {
   isolation: isolate;
 }
 
+@font-face {
+  font-family: "Outfit";
+  src: local("Outfit"), url("./fonts/Outfit-VariableFont_wght.ttf");
+}
+
 /* ======================= */
 /* Utility Classes */
 /* ======================= */
