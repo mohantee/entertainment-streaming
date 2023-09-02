@@ -96,6 +96,7 @@ h6 {
 @font-face {
   font-family: "Outfit";
   src: local("Outfit"), url("./fonts/Outfit-VariableFont_wght.ttf");
+  font-display: fallback;
 }
 
 /* ======================= */
