@@ -1,81 +1,5 @@
 [
   {
-    "title": "Beyond Earth",
-    "thumbnail": {
-      "trending": {
-        "small": "/assets/thumbnails/beyond-earth/trending/small.jpg",
-        "large": "/assets/thumbnails/beyond-earth/trending/large.jpg"
-      },
-      "regular": {
-        "small": "/assets/thumbnails/beyond-earth/regular/small.jpg",
-        "medium": "/assets/thumbnails/beyond-earth/regular/medium.jpg",
-        "large": "/assets/thumbnails/beyond-earth/regular/large.jpg"
-      }
-    },
-    "year": 2019,
-    "category": "Movie",
-    "rating": "PG",
-    "isBookmarked": false,
-    "isTrending": true
-  },
-  {
-    "title": "Bottom Gear",
-    "thumbnail": {
-      "trending": {
-        "small": "/assets/thumbnails/bottom-gear/trending/small.jpg",
-        "large": "/assets/thumbnails/bottom-gear/trending/large.jpg"
-      },
-      "regular": {
-        "small": "/assets/thumbnails/bottom-gear/regular/small.jpg",
-        "medium": "/assets/thumbnails/bottom-gear/regular/medium.jpg",
-        "large": "/assets/thumbnails/bottom-gear/regular/large.jpg"
-      }
-    },
-    "year": 2021,
-    "category": "Movie",
-    "rating": "PG",
-    "isBookmarked": false,
-    "isTrending": true
-  },
-  {
-    "title": "Undiscovered Cities",
-    "thumbnail": {
-      "trending": {
-        "small": "/assets/thumbnails/undiscovered-cities/trending/small.jpg",
-        "large": "/assets/thumbnails/undiscovered-cities/trending/large.jpg"
-      },
-      "regular": {
-        "small": "/assets/thumbnails/undiscovered-cities/regular/small.jpg",
-        "medium": "/assets/thumbnails/undiscovered-cities/regular/medium.jpg",
-        "large": "/assets/thumbnails/undiscovered-cities/regular/large.jpg"
-      }
-    },
-    "year": 2019,
-    "category": "TV Series",
-    "rating": "E",
-    "isBookmarked": false,
-    "isTrending": true
-  },
-  {
-    "title": "1998",
-    "thumbnail": {
-      "trending": {
-        "small": "/assets/thumbnails/1998/trending/small.jpg",
-        "large": "/assets/thumbnails/1998/trending/large.jpg"
-      },
-      "regular": {
-        "small": "/assets/thumbnails/1998/regular/small.jpg",
-        "medium": "/assets/thumbnails/1998/regular/medium.jpg",
-        "large": "/assets/thumbnails/1998/regular/large.jpg"
-      }
-    },
-    "year": 2021,
-    "category": "Movie",
-    "rating": "18+",
-    "isBookmarked": false,
-    "isTrending": true
-  },
-  {
     "title": "Dark Side of the Moon",
     "thumbnail": {
       "trending": {
@@ -125,19 +49,23 @@
     "isTrending": false
   },
   {
-    "title": "Earth’s Untouched",
+    "title": "Beyond Earth",
     "thumbnail": {
+      "trending": {
+        "small": "/assets/thumbnails/beyond-earth/trending/small.jpg",
+        "large": "/assets/thumbnails/beyond-earth/trending/large.jpg"
+      },
       "regular": {
-        "small": "/assets/thumbnails/earths-untouched/regular/small.jpg",
-        "medium": "/assets/thumbnails/earths-untouched/regular/medium.jpg",
-        "large": "/assets/thumbnails/earths-untouched/regular/large.jpg"
+        "small": "/assets/thumbnails/beyond-earth/regular/small.jpg",
+        "medium": "/assets/thumbnails/beyond-earth/regular/medium.jpg",
+        "large": "/assets/thumbnails/beyond-earth/regular/large.jpg"
       }
     },
-    "year": 2017,
+    "year": 2019,
     "category": "Movie",
-    "rating": "18+",
+    "rating": "PG",
     "isBookmarked": false,
-    "isTrending": false
+    "isTrending": true
   },
   {
     "title": "No Land Beyond",
@@ -168,6 +96,25 @@
     "rating": "PG",
     "isBookmarked": false,
     "isTrending": false
+  },
+  {
+    "title": "1998",
+    "thumbnail": {
+      "trending": {
+        "small": "/assets/thumbnails/1998/trending/small.jpg",
+        "large": "/assets/thumbnails/1998/trending/large.jpg"
+      },
+      "regular": {
+        "small": "/assets/thumbnails/1998/regular/small.jpg",
+        "medium": "/assets/thumbnails/1998/regular/medium.jpg",
+        "large": "/assets/thumbnails/1998/regular/large.jpg"
+      }
+    },
+    "year": 2021,
+    "category": "Movie",
+    "rating": "18+",
+    "isBookmarked": false,
+    "isTrending": true
   },
   {
     "title": "Autosport the Series",
@@ -230,6 +177,40 @@
     "isTrending": false
   },
   {
+    "title": "Earth’s Untouched",
+    "thumbnail": {
+      "regular": {
+        "small": "/assets/thumbnails/earths-untouched/regular/small.jpg",
+        "medium": "/assets/thumbnails/earths-untouched/regular/medium.jpg",
+        "large": "/assets/thumbnails/earths-untouched/regular/large.jpg"
+      }
+    },
+    "year": 2017,
+    "category": "Movie",
+    "rating": "18+",
+    "isBookmarked": false,
+    "isTrending": false
+  },
+  {
+    "title": "Undiscovered Cities",
+    "thumbnail": {
+      "trending": {
+        "small": "/assets/thumbnails/undiscovered-cities/trending/small.jpg",
+        "large": "/assets/thumbnails/undiscovered-cities/trending/large.jpg"
+      },
+      "regular": {
+        "small": "/assets/thumbnails/undiscovered-cities/regular/small.jpg",
+        "medium": "/assets/thumbnails/undiscovered-cities/regular/medium.jpg",
+        "large": "/assets/thumbnails/undiscovered-cities/regular/large.jpg"
+      }
+    },
+    "year": 2019,
+    "category": "TV Series",
+    "rating": "E",
+    "isBookmarked": false,
+    "isTrending": true
+  },
+  {
     "title": "Relentless",
     "thumbnail": {
       "regular": {
@@ -273,6 +254,25 @@
     "rating": "PG",
     "isBookmarked": false,
     "isTrending": false
+  },
+  {
+    "title": "Bottom Gear",
+    "thumbnail": {
+      "trending": {
+        "small": "/assets/thumbnails/bottom-gear/trending/small.jpg",
+        "large": "/assets/thumbnails/bottom-gear/trending/large.jpg"
+      },
+      "regular": {
+        "small": "/assets/thumbnails/bottom-gear/regular/small.jpg",
+        "medium": "/assets/thumbnails/bottom-gear/regular/medium.jpg",
+        "large": "/assets/thumbnails/bottom-gear/regular/large.jpg"
+      }
+    },
+    "year": 2021,
+    "category": "Movie",
+    "rating": "PG",
+    "isBookmarked": false,
+    "isTrending": true
   },
   {
     "title": "The Heiress",
