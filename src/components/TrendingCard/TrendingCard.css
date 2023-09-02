@@ -5,6 +5,8 @@
   text-decoration: none;
   color: hsl(var(--clr-white));
 
+  scroll-snap-points-x: repeat(100%);
+
   &:focus {
     outline: none;
   }
@@ -44,11 +46,11 @@
   .thumbnail {
     border-radius: 8px;
     overflow: hidden;
-    aspect-ratio: 16/9;
     min-width: 164px;
     position: relative;
     background-position: center;
     background-size: cover;
+    aspect-ratio: 16 / 9;
   }
 
   .play-icon {
@@ -137,6 +139,11 @@
     display: flex;
     align-items: center;
     gap: 3px;
+    padding-left: 0.5rem;
+  }
+
+  .title {
+    padding: 0 0.5rem 1rem 0.5rem;
   }
 
   .position-absolute {
@@ -162,7 +169,6 @@
   .title {
     font-size: var(--fs-500);
     font-weight: 500;
-    padding: 0;
     line-height: 1;
   }
 
@@ -173,5 +179,13 @@
 
   .thumbnail {
     height: clamp(165px, 15vw, 400px);
+  }
+}
+
+@media (min-width: 30rem) {
+  .trending-card {
+    .thumbnail {
+      aspect-ratio: 2 / 1;
+    }
   }
 }

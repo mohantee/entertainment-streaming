@@ -33,10 +33,25 @@ const PreviewCard = (props: PreviewCardProps) => {
         <p className="category">{category} • </p>
         <p className="rating">{rating}</p>
       </div>
-      <div
-        className="thumbnail"
-        style={{ backgroundImage: `url(${thumbnail.regular.large})` }}
-      >
+      <div className="thumbnail">
+        <picture>
+          <source
+            media="(min-width: 768px)"
+            srcSet={thumbnail.regular.large}
+            height="100%"
+          />
+          <source
+            media="(min-width: 480px)"
+            srcSet={thumbnail.regular.medium}
+            height="100%"
+          />
+          <source
+            media="(max-width: 0px)"
+            srcSet={thumbnail.regular.small}
+            height="100%"
+          />
+          <img src={thumbnail.regular.medium} alt="" />
+        </picture>
         <div className="play-button">
           <img src={PlayIcon} className="play-icon" alt="" />
           <p>Play</p>

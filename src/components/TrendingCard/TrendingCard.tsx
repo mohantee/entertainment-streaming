@@ -21,10 +21,20 @@ const TrendingCard = (props: TrendingCardProps) => {
       className="trending-card"
       onClick={(e) => e.currentTarget.blur()}
     >
-      <div
-        className="thumbnail"
-        style={{ backgroundImage: `url(${thumbnail.trending?.large})` }}
-      >
+      <div className="thumbnail">
+        <picture className="preview-image">
+          <source
+            media="(min-width: 480px)"
+            srcSet={thumbnail.trending?.large}
+            height="100%"
+          />
+          <source
+            media="(max-width: 0px)"
+            srcSet={thumbnail.trending?.small}
+            height="100%"
+          />
+          <img src={thumbnail.regular.medium} alt="" />
+        </picture>
         <div className="position-absolute">
           <h1 className="title">{title}</h1>
           <div className="category-container">
