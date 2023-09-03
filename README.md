@@ -36,8 +36,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- [Solution URL](https://www.frontendmentor.io/solutions/entertainment-streaming-web-app-using-vite-react-typescript-template-T7eJmAeTAt)
+- [Live Site URL](https://entertainment-streaming.vercel.app/home)
 
 ## My process
 
