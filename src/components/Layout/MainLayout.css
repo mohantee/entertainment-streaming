@@ -8,8 +8,8 @@
   }
 
   .inner-content {
-    margin-left: 6rem;
-    padding: 2vw;
-    width: calc(100vw - 6rem);
+    margin-left: 8rem;
+    padding: 2rem;
+    width: calc(100vw - 8rem);
   }
 }

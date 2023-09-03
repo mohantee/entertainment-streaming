@@ -39,16 +39,19 @@ const PreviewCard = (props: PreviewCardProps) => {
             media="(min-width: 768px)"
             srcSet={thumbnail.regular.large}
             height="100%"
+            width="100%"
           />
           <source
             media="(min-width: 480px)"
             srcSet={thumbnail.regular.medium}
             height="100%"
+            width="100%"
           />
           <source
             media="(max-width: 0px)"
             srcSet={thumbnail.regular.small}
             height="100%"
+            width="100%"
           />
           <img src={thumbnail.regular.medium} alt="" />
         </picture>

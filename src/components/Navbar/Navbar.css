@@ -76,11 +76,10 @@
     --navbar-height: 90%;
     --navbar-y-margin: calc((100% - var(--navbar-height)) / 2);
     height: var(--navbar-height);
-    width: 6vw;
     min-width: 4rem;
     max-width: 6rem;
     position: fixed;
-    inset: var(--navbar-y-margin) 1rem;
+    inset: var(--navbar-y-margin) 2rem;
     z-index: 2;
     border-radius: 20px;
     padding: 2rem 1rem;
