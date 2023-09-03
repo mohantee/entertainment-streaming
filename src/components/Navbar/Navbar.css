@@ -72,6 +72,7 @@
     height: 20px;
   }
   .navbar {
+    position: relative;
     margin: 0;
     --navbar-height: 90%;
     --navbar-y-margin: calc((100% - var(--navbar-height)) / 2);
@@ -83,6 +84,8 @@
     z-index: 2;
     border-radius: 20px;
     padding: 2rem 1rem;
+    justify-content: initial;
+    gap: 4rem;
   }
   .navbar .logo {
     height: 1.5rem;
@@ -91,6 +94,8 @@
   .navbar .avatar {
     height: 2.5rem;
     width: 2.5rem;
+    position: absolute;
+    bottom: 2rem;
   }
   .svg {
     transform: scale(1.25);
