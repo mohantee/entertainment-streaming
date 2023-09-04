@@ -14,7 +14,16 @@ const Navbar = () => {
 
   return (
     <nav className="navbar bg-semi-dark">
-      <img src={Logo} height={25.5} width={32} className="logo" alt="" />
+      <h1 className="logo-heading sr-only">Entertainment App</h1>
+      <Link to="">
+        <img
+          src={Logo}
+          height={25.5}
+          width={32}
+          className="logo"
+          alt="Entertainment App logo"
+        />
+      </Link>
       <ul className="nav-links">
         <li>
           <Link to="/home" title="Home">
@@ -123,13 +132,15 @@ const Navbar = () => {
           </Link>
         </li>
       </ul>
-      <img
-        src={ImageAvatar}
-        width={40}
-        height={40}
-        className="avatar"
-        alt="avatar"
-      />
+      <Link to="">
+        <img
+          src={ImageAvatar}
+          width={40}
+          height={40}
+          className="your avatar"
+          alt="avatar"
+        />
+      </Link>
     </nav>
   );
 };

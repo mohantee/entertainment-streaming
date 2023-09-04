@@ -3,11 +3,11 @@
 }
 
 @media (min-width: 48rem) {
-  .main-layout {
+  .primary-layout {
     display: flex;
   }
 
-  .inner-content {
+  .main-content {
     margin-left: 8rem;
     padding: 2rem;
     width: calc(100vw - 8rem);
