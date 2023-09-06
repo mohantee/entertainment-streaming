@@ -1,5 +1,5 @@
 import { useOutletContext } from "react-router-dom";
-import PreviewGrid from "../components/PreviewGrid/PreviewGrid";
+// import PreviewGrid from "../components/PreviewGrid/PreviewGrid";
 import useShowsStore from "../store/shows";
 import { FiAlertCircle } from "react-icons/fi";
 
@@ -22,7 +22,7 @@ const TVSeries = () => {
     );
   }
 
-  return <PreviewGrid shows={filteredShows} heading="TV Series" />;
+  // return <PreviewGrid shows={filteredShows} heading="TV Series" />;
 };
 
 export default TVSeries;

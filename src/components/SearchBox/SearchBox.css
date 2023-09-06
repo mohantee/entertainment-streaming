@@ -7,6 +7,8 @@
   padding: 0.5rem;
   margin-bottom: 1rem;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px; /* border-radius: 0 0 10px 10px; */
+  position: sticky;
+  left: 0;
 }
 
 .search-icon {
@@ -35,16 +37,4 @@
 .search-box::placeholder {
   color: hsl(var(--clr-white));
   font-weight: 300;
-}
-
-@media (min-width: 30rem) {
-  .search-icon {
-    height: 32px;
-    width: 32px;
-    margin-right: 1rem;
-  }
-  .search-box-group {
-    position: sticky;
-    top: 0;
-  }
 }

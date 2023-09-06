@@ -1,4 +1,4 @@
-import PreviewGrid from "../components/PreviewGrid/PreviewGrid";
+// import PreviewGrid from "../components/PreviewGrid/PreviewGrid";
 import useShowsStore from "../store/shows";
 import { FiAlertCircle } from "react-icons/fi";
 import { useOutletContext } from "react-router-dom";
@@ -43,8 +43,10 @@ const Bookmarks = () => {
 
   const UIBookmarks = (
     <>
+      {/*
       {filteredBookmarkedMovies.length ? (
-        <PreviewGrid
+
+          <PreviewGrid
           heading="Bookmarked Movies"
           shows={filteredBookmarkedMovies}
         />
@@ -55,6 +57,7 @@ const Bookmarks = () => {
           shows={filteredBookmarkeTVSeries}
         />
       ) : null}
+        */}
     </>
   );
 

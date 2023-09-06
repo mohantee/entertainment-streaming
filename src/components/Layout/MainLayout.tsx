@@ -7,10 +7,8 @@ import { Suspense, useState } from "react";
 const MainLayout = () => {
   const [searchValue, setSearchValue] = useState("");
   return (
-    <div className="primary-layout">
-      <header>
-        <Navbar />
-      </header>
+    <div className="app-layout">
+      <Navbar />
       <main className="main-content">
         <SearchBox search={[searchValue, setSearchValue]} />
         <Suspense fallback={<h1>Loading...</h1>}>

@@ -7,7 +7,7 @@ import postcssNesting from "postcss-nesting";
 // https://vitejs.dev/config/
 
 export default {
-  plugins: [react(), svgr()],
+  plugins: [react(), svgr({ exportAsDefault: true })],
   css: {
     postcss: {
       plugins: [postcssNesting],

@@ -1,0 +1,73 @@
+.media-card[data-size="lg"] {
+  position: relative;
+  picture {
+    min-width: 30vw;
+    transition: transform 0.3s ease;
+    border-radius: 8px;
+    overflow: hidden;
+    aspect-ratio: 940 / 460;
+  }
+
+  picture::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsl(var(--clr-dark) / 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  a {
+    color: white;
+  }
+}
+
+.media-card[data-size="md"] {
+  position: relative;
+  .image-wrapper {
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    grid-area: image;
+  }
+  picture {
+    transition: transform 0.3s ease;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  picture::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsl(var(--clr-dark) / 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .media-meta {
+    position: absolute;
+    grid-area: info;
+  }
+}
+
+.media-card {
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .media-card:hover {
+    picture {
+      transform: scale(1.05);
+    }
+    picture::after {
+      opacity: 1;
+    }
+  }
+}

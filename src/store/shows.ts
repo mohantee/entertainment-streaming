@@ -1,6 +1,25 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
-import { Show } from "../components/PreviewGrid/PreviewGrid";
+
+export interface Show {
+  title: string;
+  thumbnail: {
+    trending?: {
+      small: string;
+      large: string;
+    };
+    regular: {
+      small: string;
+      medium: string;
+      large: string;
+    };
+  };
+  year: number;
+  category: "Movie" | "TV Series";
+  rating: "PG" | "E" | "18+";
+  isBookmarked: boolean;
+  isTrending: boolean;
+}
 
 interface ShowsState {
   shows: Show[];

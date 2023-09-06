@@ -1,0 +1,28 @@
+.media-grid[data-slider="false"] {
+  ul {
+    display: grid;
+    padding: 0;
+    gap: 2rem;
+    /* grid-template-columns: repeat( */
+    /*   auto-fit, */
+    /*   minmax(min(100%/3, max(10rem, 100%/5)), 1fr) */
+    /* ); */
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    li {
+      list-style: none;
+    }
+  }
+}
+
+.media-grid[data-slider="true"] {
+  overflow: scroll;
+
+  ul {
+    padding: 0;
+    display: flex;
+    gap: 2rem;
+    li {
+      list-style: none;
+    }
+  }
+}

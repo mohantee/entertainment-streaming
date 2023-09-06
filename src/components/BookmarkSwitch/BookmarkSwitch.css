@@ -1,0 +1,49 @@
+.media-card {
+  .bookmark-switch {
+    cursor: pointer;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+
+    path,
+    circle {
+      transition: all 0.3s ease;
+    }
+  }
+
+  .bookmark-switch[aria-pressed="true"] {
+    path {
+      fill: white;
+      stroke: white;
+    }
+    circle {
+      fill: black;
+    }
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .bookmark-switch[aria-pressed="false"] {
+    &:hover path {
+      fill: black;
+      stroke: black;
+    }
+
+    &:hover circle {
+      fill: white;
+      opacity: 1;
+    }
+  }
+
+  .bookmark-switch[aria-pressed="true"] {
+    &:hover path {
+      fill: white;
+      stroke: black;
+    }
+
+    &:hover circle {
+      fill: white;
+      opacity: 1;
+    }
+  }
+}

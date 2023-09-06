@@ -1,0 +1,25 @@
+.play-icon {
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.5rem 0.6rem;
+  background-color: hsl(var(--clr-white) / 0.25);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .media-card:hover .play-icon {
+    opacity: 1;
+  }
+
+  .play-icon:hover {
+    transform: scale(1.1) translate(-45%, -45%);
+  }
+}
