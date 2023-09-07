@@ -2,14 +2,26 @@
 
 import "./BookmarkSwitch.css";
 import BookmarkFull from "../../assets/icon-bookmark-empty.svg";
-const BookmarkSwitch = () => {
+import useShowsStore from "../../store/shows";
+import { Show } from "../../store/shows";
+
+interface BookmarkSwitchProps {
+  show: Show;
+}
+
+const BookmarkSwitch = (props: BookmarkSwitchProps) => {
+  const toggleBookmark = useShowsStore((state) => state.toggleBookmark);
   return (
-    <BookmarkFull
-      role="button"
+    <button
+      type="button"
+      aria-pressed={props.show.isBookmarked}
+      role="switch"
+      aria-label="Bookmark"
       className="bookmark-switch"
-      aria-pressed="false"
-      aria-label="bookmark"
-    />
+      onClick={() => toggleBookmark(props.show)}
+    >
+      <BookmarkFull />
+    </button>
   );
 };
 

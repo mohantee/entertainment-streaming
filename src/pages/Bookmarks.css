@@ -1,6 +1,6 @@
 .bookmarks-empty {
-  height: 100%;
   width: 100%;
+  height: 10rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,4 +12,10 @@
 .empty-alert {
   font-size: var(--fs-600);
   text-align: center;
+}
+
+.bookmark-layout {
+  h2 {
+    margin-top: 2rem;
+  }
 }

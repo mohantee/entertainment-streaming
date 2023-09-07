@@ -1,5 +1,7 @@
 import { useOutletContext } from "react-router-dom";
 // import PreviewGrid from "../components/PreviewGrid/PreviewGrid";
+import MediaGrid from "../components/MediaGrid/MediaGrid";
+import MediaCard from "../components/MediaCard/MediaCard";
 import useShowsStore from "../store/shows";
 import { FiAlertCircle } from "react-icons/fi";
 
@@ -22,7 +24,16 @@ const Movies = () => {
     );
   }
 
-  // return <PreviewGrid shows={filteredShows} heading="Movies" />;
+  return (
+    <div className="flow">
+      <h2 className="fs-700">Movies</h2>
+      <MediaGrid>
+        {filteredShows.map((show) => (
+          <MediaCard key={show.title} size="md" show={show} />
+        ))}
+      </MediaGrid>
+    </div>
+  );
 };
 
 export default Movies;

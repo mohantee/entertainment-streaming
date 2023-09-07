@@ -3,6 +3,7 @@ import SearchBox from "../SearchBox/SearchBox";
 import { Outlet } from "react-router-dom";
 import "./MainLayout.css";
 import { Suspense, useState } from "react";
+import Loader from "../Loader/Loader";
 
 const MainLayout = () => {
   const [searchValue, setSearchValue] = useState("");
@@ -11,7 +12,7 @@ const MainLayout = () => {
       <Navbar />
       <main className="main-content">
         <SearchBox search={[searchValue, setSearchValue]} />
-        <Suspense fallback={<h1>Loading...</h1>}>
+        <Suspense fallback={<Loader />}>
           <Outlet context={[searchValue, setSearchValue]} />
         </Suspense>
       </main>

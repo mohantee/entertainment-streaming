@@ -21,7 +21,7 @@
   --ff-primary: "Outfit", serif;
 }
 
-@media (min-width: 30rem) {
+@media (min-width: 48rem) {
   :root {
     /* font-sizes */
     --fs-700: 2rem;

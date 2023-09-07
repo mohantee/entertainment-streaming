@@ -1,4 +1,6 @@
 // import PreviewGrid from "../components/PreviewGrid/PreviewGrid";
+import MediaGrid from "../components/MediaGrid/MediaGrid";
+import MediaCard from "../components/MediaCard/MediaCard";
 import useShowsStore from "../store/shows";
 import { FiAlertCircle } from "react-icons/fi";
 import { useOutletContext } from "react-router-dom";
@@ -17,7 +19,7 @@ const Bookmarks = () => {
       bookmark.category === "Movie",
   );
 
-  const filteredBookmarkeTVSeries = bookmarks.filter(
+  const filteredBookmarkedTVSeries = bookmarks.filter(
     (bookmark) =>
       bookmark.title.toLowerCase().includes(searchValue.toLowerCase()) &&
       bookmark.category === "TV Series",
@@ -32,7 +34,7 @@ const Bookmarks = () => {
 
   if (!bookmarks.length) return UIEmptyBookmarksAlert;
 
-  if (!filteredBookmarkedMovies.length && !filteredBookmarkeTVSeries.length) {
+  if (!filteredBookmarkedMovies.length && !filteredBookmarkedTVSeries.length) {
     return (
       <div className="search-empty">
         <FiAlertCircle size={35} />
@@ -43,21 +45,26 @@ const Bookmarks = () => {
 
   const UIBookmarks = (
     <>
-      {/*
       {filteredBookmarkedMovies.length ? (
-
-          <PreviewGrid
-          heading="Bookmarked Movies"
-          shows={filteredBookmarkedMovies}
-        />
+        <div className="flow bookmark-layout">
+          <h2 className="fs-700">Bookmarked Movies</h2>
+          <MediaGrid>
+            {filteredBookmarkedMovies.map((show) => (
+              <MediaCard key={show.title} size="md" show={show} />
+            ))}
+          </MediaGrid>
+        </div>
       ) : null}
-      {filteredBookmarkeTVSeries.length ? (
-        <PreviewGrid
-          heading="Bookmarked TV Series"
-          shows={filteredBookmarkeTVSeries}
-        />
+      {filteredBookmarkedTVSeries.length ? (
+        <div className="flow bookmark-layout">
+          <h2 className="fs-700">Bookmarked TV Series</h2>
+          <MediaGrid>
+            {filteredBookmarkedTVSeries.map((show) => (
+              <MediaCard key={show.title} size="md" show={show} />
+            ))}
+          </MediaGrid>
+        </div>
       ) : null}
-        */}
     </>
   );
 

@@ -1,5 +1,4 @@
-.media-meta {
-  position: absolute;
+.media-card .media-meta {
   bottom: 1rem;
   left: 1rem;
   display: flex;
@@ -12,23 +11,34 @@
     line-height: 1;
   }
 
-  .title {
-    font-size: var(--fs-600);
-    font-weight: 500;
-  }
-
   dl {
     display: flex;
     align-items: center;
     gap: 0.4rem;
     font-weight: 300;
-    font-size: var(--fs-400);
     opacity: 0.75;
   }
 }
 
-.media-card[data-size="md"] {
-  .media-meta {
-    position: static;
+.media-card[data-size="lg"] .media-meta {
+  position: absolute;
+
+  .title {
+    font-size: var(--fs-600);
+    font-weight: 500;
+  }
+  dl {
+    font-size: 400;
+  }
+}
+
+.media-card[data-size="md"] .media-meta {
+  position: static;
+  .title {
+    font-weight: 500;
+    font-size: var(--fs-500);
+  }
+  dl {
+    font-size: var(--fs-300);
   }
 }

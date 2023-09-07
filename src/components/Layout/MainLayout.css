@@ -10,3 +10,31 @@
   padding-top: 2rem;
   padding-right: 2rem;
 }
+
+.search-empty {
+  height: 10rem;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  opacity: 0.5;
+}
+
+@media (max-width: 64rem) {
+  .main-content {
+    padding: 0 1rem;
+    margin-top: 7rem;
+  }
+
+  .app-layout {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+@media (max-width: 48rem) {
+  .main-content {
+    margin-top: 5rem;
+  }
+}

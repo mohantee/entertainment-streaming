@@ -1,0 +1,7 @@
+.loader {
+  width: 100%;
+  display: grid;
+  height: 10rem;
+  place-items: center;
+  margin-left: auto;
+}

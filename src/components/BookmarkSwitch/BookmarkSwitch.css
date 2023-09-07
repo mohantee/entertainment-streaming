@@ -4,6 +4,9 @@
     position: absolute;
     top: 0.5rem;
     right: 0.5rem;
+    background: none;
+    border: none;
+    padding: 0;
 
     path,
     circle {
@@ -25,7 +28,7 @@
 @media (hover: hover) and (pointer: fine) {
   .bookmark-switch[aria-pressed="false"] {
     &:hover path {
-      fill: black;
+      fill: white;
       stroke: black;
     }
 
@@ -37,7 +40,7 @@
 
   .bookmark-switch[aria-pressed="true"] {
     &:hover path {
-      fill: white;
+      fill: black;
       stroke: black;
     }
 

@@ -1,13 +1,17 @@
 .media-card[data-size="lg"] {
   position: relative;
   picture {
-    min-width: 30vw;
+    width: clamp(18rem, 30vw, 30rem);
     transition: transform 0.3s ease;
     border-radius: 8px;
     overflow: hidden;
-    aspect-ratio: 940 / 460;
   }
 
+  img {
+    width: 100%;
+  }
+
+  picture::before,
   picture::after {
     content: "";
     position: absolute;
@@ -15,9 +19,21 @@
     left: 0;
     width: 100%;
     height: 100%;
+  }
+
+  picture::after {
     background-color: hsl(var(--clr-dark) / 0.5);
     opacity: 0;
     transition: opacity 0.3s ease;
+  }
+
+  picture::before {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.7959384437368697) 0%,
+      rgba(0, 0, 0, 0) 65%
+    );
   }
 
   a {
@@ -38,6 +54,9 @@
     border-radius: 8px;
     overflow: hidden;
   }
+  img {
+    width: 100%;
+  }
   picture::after {
     content: "";
     position: absolute;
@@ -52,13 +71,23 @@
 
   .media-meta {
     position: absolute;
+    padding-top: 0.5rem;
     grid-area: info;
+  }
+  a {
+    color: white;
   }
 }
 
 .media-card {
   overflow: hidden;
   border-radius: 8px;
+  cursor: pointer;
+}
+
+.media-card:focus-within picture::after,
+.media-card:focus-within .play-icon {
+  opacity: 1;
 }
 
 @media (hover: hover) and (pointer: fine) {

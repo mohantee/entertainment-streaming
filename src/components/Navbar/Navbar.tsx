@@ -8,32 +8,44 @@ import ImageAvatar from "../../assets/image-avatar.png";
 import { Link, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 
-const NAV_ITEMS = [
-  {
-    route: "/home",
-    title: "Home",
-    icon: <HomeSVG />,
-  },
-  {
-    route: "/movies",
-    title: "Movies",
-    icon: <MovieSVG />,
-  },
-  {
-    route: "/tv-series",
-    title: "TV Series",
-    icon: <TVSeriesSVG />,
-  },
-  {
-    route: "/bookmarks",
-    title: "Bookmarks",
-    icon: <BookmarkSVG />,
-  },
-] as const;
-
 const Navbar = () => {
   const location = useLocation();
   const [currentLocation, setCurrentLocation] = useState(location.pathname);
+
+  const NAV_ITEMS = [
+    {
+      route: "/home",
+      title: "Home",
+      icon: <HomeSVG className="nav-icon" />,
+      get isCurrent() {
+        return this.route === currentLocation ? "page" : "false";
+      },
+    },
+    {
+      route: "/movies",
+      title: "Movies",
+      icon: <MovieSVG className="nav-icon" />,
+      get isCurrent() {
+        return this.route === currentLocation ? "page" : "false";
+      },
+    },
+    {
+      route: "/tv-series",
+      title: "TV Series",
+      icon: <TVSeriesSVG className="nav-icon" />,
+      get isCurrent() {
+        return this.route === currentLocation ? "page" : "false";
+      },
+    },
+    {
+      route: "/bookmarks",
+      title: "Bookmarks",
+      icon: <BookmarkSVG className="nav-icon" />,
+      get isCurrent() {
+        return this.route === currentLocation ? "page" : "false";
+      },
+    },
+  ] as const;
 
   useEffect(() => {
     setCurrentLocation(location.pathname);
@@ -43,13 +55,17 @@ const Navbar = () => {
     <div className="banner-wrapper">
       <header className="header bg-semi-dark">
         <Link to="/home" aria-label="Entertainment company">
-          <Logo />
+          <Logo className="logo" />
         </Link>
         <nav>
           <ul>
             {NAV_ITEMS.map((item) => (
               <li key={item.title}>
-                <Link to={item.route} title={item.title}>
+                <Link
+                  to={item.route}
+                  title={item.title}
+                  aria-current={item.isCurrent}
+                >
                   {item.icon}
                 </Link>
               </li>
@@ -61,8 +77,8 @@ const Navbar = () => {
             src={ImageAvatar}
             width={40}
             height={40}
-            className="your avatar"
-            alt="avatar"
+            className="avatar"
+            alt="your avatar"
           />
         </Link>
       </header>
