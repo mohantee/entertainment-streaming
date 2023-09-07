@@ -9,6 +9,7 @@
 
   img {
     width: 100%;
+    aspect-ratio: 940 / 460;
   }
 
   picture::before,
@@ -56,6 +57,7 @@
   }
   img {
     width: 100%;
+    aspect-ratio: 440 / 280;
   }
   picture::after {
     content: "";
