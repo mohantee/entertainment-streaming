@@ -11,6 +11,12 @@
     line-height: 1;
   }
 
+  .category {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+
   dl {
     display: flex;
     align-items: center;

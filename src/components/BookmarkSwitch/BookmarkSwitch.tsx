@@ -15,7 +15,6 @@ const BookmarkSwitch = (props: BookmarkSwitchProps) => {
     <button
       type="button"
       aria-pressed={props.show.isBookmarked}
-      role="switch"
       aria-label="Bookmark"
       className="bookmark-switch"
       onClick={() => toggleBookmark(props.show)}

@@ -18,8 +18,10 @@ const MediaMeta = (props: MediaMetaProps) => {
         <dd className="year">{props.show.year}</dd>
         <span aria-hidden="true">•</span>
         <dt className="sr-only">Category</dt>
-        {props.show.category === "Movie" ? <MovieIcon /> : <TVSeriesIcon />}
-        <dd className="category">{props.show.category}</dd>
+        <dd className="category">
+          {props.show.category === "Movie" ? <MovieIcon /> : <TVSeriesIcon />}
+          {props.show.category}
+        </dd>
         <span aria-hidden="true">•</span>
         <dt className="sr-only">Rating</dt>
         <dd className="rating">{props.show.rating}</dd>
