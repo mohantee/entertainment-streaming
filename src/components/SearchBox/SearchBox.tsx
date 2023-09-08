@@ -25,7 +25,7 @@ const SearchBox = (props: SearchBoxProps) => {
 
   return (
     <div className="search-box-group">
-      <IconSearch className="search-icon" />
+      <IconSearch className="search-icon" aria-hidden="true" />
       <label htmlFor="search" className="sr-only">
         Search for Movies or TV series
       </label>
